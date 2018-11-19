@@ -48,10 +48,12 @@ public:
 	//pass in a plaintext unencrypted string, its encrypted to unsigned char (binary) and 
 	//then converted to a Hex string via HexHelper::CharStr2HexStr
 	//doubles original string size, there are more efficient ways to do this 
+	//returns true on success, false otherwise
 	bool encrypt(std::string &myDecryptedData);
 
 	//pass in an encrypted hex string, its converted to unsigned char (binary) via 
 	//HexHelper::HexStr2CharStrand and then decrypted to original plaintext string 
+	//returns true on success, false otherwise
 	bool decrypt(std::string &myEncryptedData);
 };
 
